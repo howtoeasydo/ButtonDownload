@@ -1,131 +1,60 @@
+<!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="social-btns">
-<a class="btn facebook" href="#">
-<i class="fa fa-facebook">
-</i></a><a class="btn twitter" href="#">
-<i class="fa fa-twitter">
-</i>
-</a>
-<a class="btn google" href="#">// reset
-@import '//codepen.io/chrisdothtml/pen/ojLzJK.css'
-
-btn-size = 90px
-sites = {
-  'facebook': #3B5998
-  'twitter': #3CF
-  'google': #DC4A38
-  'dribbble': #F26798
-  'skype': #00AFF0
+<style type="text/css">
+  .icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-$animate {
-  transition: all .35s
-  transition-timing-function: cubic-bezier(
-    0.310,
-    -0.105,
-    0.430,
-    1.590
-  )
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
 }
 
-$btn__inactive {
-  
-  &:before {
-    top: 90%
-    left: -110%
-  }
-  
-  .fa {
-    transform: scale(.8)
-  }
-  
-  // variants
-  for name, color in sites {
-    
-    &.{name} {
-      
-      &:before {
-        background-color: color
-      }
-      
-      .fa {
-        color: color
-      }
-    }
-  }
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
 }
 
-$btn__active {
-
-  &:before {
-    top: -10%
-    left: -10%
-  }
-
-  .fa {
-    color: #fff
-    transform: scale(1)
-  }
+.facebook {
+  background: #3B5998;
+  color: white;
 }
 
-.social-btns {
-  height: btn-size
-  margin: auto
-  font-size: 0
-  text-align: center
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-
-  .btn {
-    @extends $btn__inactive
-    @extends $animate
-    display: inline-block
-    background-color: #fff
-    width: btn-size
-    height: btn-size
-    line-height: btn-size
-    margin: 0 10px
-    text-align: center
-    position: relative
-    overflow: hidden
-    border-radius: 28%
-    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1)
-    //overflow bug fix
-    opacity: .99
-
-    &:before {
-      @extends $animate
-      content: ''
-      width: 120%
-      height: 120%
-      position: absolute
-      transform: rotate(45deg)
-    }
-
-    .fa {
-      @extends $animate
-      font-size: 38px
-      vertical-align: middle
-    }
-
-    &:focus,
-    &:hover {
-      @extends $btn__active
-    }
-  }
+.twitter {
+  background: #55ACEE;
+  color: white;
 }
-<i class="fa fa-google">
-</i>
-</a>
-<a class="btn dribbble" href="#">
-<i class="fa fa-dribbble">
-</i>
-</a>
-<a class="btn skype" href="#">
-<i class="fa fa-skype">
-</i>
-</a>
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+</style>
+<!-- The social media icon bar -->
+<div class="icon-bar">
+  <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://howtoeasydo.com" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="http://www.facebook.com/sharer.php?u=https://howtoeasydo.com" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="https://plus.google.com/share?url=https://howtoeasydo.com" class="google"><i class="fa fa-google"></i></a> 
+  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://howtoeasydo.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" class="youtube"><i class="fa fa-youtube"></i></a> 
 </div>
